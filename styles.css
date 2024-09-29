@@ -8,7 +8,6 @@
   --font-family: 'Arial', sans-serif;
 }
 
-/* Estilos Globais */
 body {
   font-family: var(--font-family);
   margin: 0;
@@ -23,7 +22,6 @@ body {
   padding: 20px;
 }
 
-/* Header */
 .header {
   text-align: center;
   margin-bottom: 50px;
@@ -39,7 +37,6 @@ body {
   color: var(--text-color);
 }
 
-/* Estilos padrão para o menu */
 .navbar {
   display: flex;
   justify-content: center;
@@ -75,7 +72,6 @@ body {
   color: var(--secondary-color);
 }
 
-/* Estilo do menu hambúrguer (mobile) */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -83,14 +79,13 @@ body {
   padding: 10px;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
   .nav-links {
-    max-height: 0; /* Começa fechado */
+    max-height: 0; 
     overflow: hidden;
     flex-direction: column;
     position: absolute;
@@ -101,11 +96,11 @@ body {
     z-index: 1001;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 0;
-    transition: max-height 0.3s ease; /* Animação suave ao abrir e fechar */
+    transition: max-height 0.3s ease; 
   }
 
   .nav-links.active {
-    max-height: 300px; /* Altura suficiente para os links */
+    max-height: 300px; 
     padding: 10px 0;
   }
 
@@ -118,20 +113,17 @@ body {
     font-size: 1.2rem;
   }
 
-  /* Impedir o scroll do body quando o menu estiver aberto */
   body.menu-open {
     overflow: hidden;
   }
 }
 
-/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* Cartões */
 .card {
   background-color: var(--white-color);
   border-radius: 12px;
@@ -154,7 +146,6 @@ body {
   color: var(--text-color);
 }
 
-/* Value Proposition */
 .value-proposition h2 {
   font-size: 2rem;
   margin-bottom: 30px;
@@ -169,7 +160,6 @@ body {
   color: var(--text-color);
 }
 
-/* Call to Action */
 .cta {
   text-align: center;
   margin-bottom: 50px;
@@ -212,7 +202,6 @@ button:focus {
   outline: 2px solid var(--primary-color);
 }
 
-/* Testemunhos */
 .testimonials h2 {
   text-align: center;
   font-size: 2rem;
@@ -238,7 +227,6 @@ button:focus {
   opacity: 1;
 }
 
-/* Rodapé */
 .footer {
   text-align: center;
   padding: 20px 0;
@@ -259,7 +247,6 @@ button:focus {
   text-decoration: underline;
 }
 
-/* Estilo para o formulário */
 #booking-form {
   display: flex;
   flex-direction: column;

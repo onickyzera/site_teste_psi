@@ -1,4 +1,3 @@
-// Scroll suave para links de âncora
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault()
@@ -8,7 +7,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     })
   })
   
-  // Validação do formulário de agendamento
   const form = document.querySelector('#booking-form')
   const bookingButton = document.querySelector('.btn-primary') // Mover para antes do submit
   
@@ -25,20 +23,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       alert('Consulta agendada com sucesso!')
     }
   })
-  
-  // Feedback visual ao clicar no botão de agendamento
+ 
   bookingButton.addEventListener('click', function() {
     this.textContent = 'Aguarde...'
     this.disabled = true
-  
-    // Simulação de uma ação de 2 segundos
+
     setTimeout(() => {
       this.textContent = 'Agende Sua Consulta'
       this.disabled = false
     }, 2000)
   })
-  
-  // Carrossel de testemunhos
+
   const testimonials = document.querySelectorAll('.testimonials-card p')
   let currentTestimonial = 0
   
@@ -48,29 +43,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     testimonials[currentTestimonial].classList.add('active')
   }
   
-  // Inicializa o carrossel com o primeiro ativo
   testimonials[0].classList.add('active')
   
-  setInterval(showNextTestimonial, 7000) // Troca o testemunho a cada 7 segundos
+  setInterval(showNextTestimonial, 7000) 
   
-  // Menu responsivo (hambúrguer)
   const menuToggle = document.querySelector('.menu-toggle')
   const navLinks = document.querySelector('.nav-links')
   
-  // Função para abrir/fechar o menu
   menuToggle.addEventListener('click', () => {
     const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false
     menuToggle.setAttribute('aria-expanded', !isExpanded)
-    navLinks.classList.toggle('active') // Alterna a visibilidade do menu
-    document.body.classList.toggle('menu-open') // Bloqueia ou libera o scroll do body
+    navLinks.classList.toggle('active') 
+    document.body.classList.toggle('menu-open') 
   })
   
-  // Fecha o menu ao clicar em qualquer link
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-      navLinks.classList.remove('active') // Fecha o menu
-      menuToggle.setAttribute('aria-expanded', false) // Atualiza o estado do botão de hambúrguer
-      document.body.classList.remove('menu-open') // Libera o scroll
+      navLinks.classList.remove('active') 
+      menuToggle.setAttribute('aria-expanded', false) 
+      document.body.classList.remove('menu-open') 
     })
   })
   
